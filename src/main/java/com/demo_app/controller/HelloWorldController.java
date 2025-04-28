@@ -9,6 +9,6 @@ public class HelloWorldController {
 	@GetMapping("/message")
 	public String getMessage() {
 		
-		return "Hey, Nice to See You!!<br><br>I'm Nitin and I will be assisting you with your queries today.";
+		return "Hey there, Glad to See You!!<br><br>I'm Nitin and I'll be assisting you with your queries today.";
 	}
 }
