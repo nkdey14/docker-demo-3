@@ -20,7 +20,7 @@ spec:
    - name: demoappcontainer
      image: nitinkumar789/demoapp:dev-v3
      ports:
-     - containerPort: 9090
+     - containerPort:  8083
 ---
 apiVersion: v1
 kind: Service
@@ -32,5 +32,5 @@ spec:
   app: springbootwebapp
  ports:
   - port: 80
-    targetPort: 9090
+    targetPort:  8083
 ...
