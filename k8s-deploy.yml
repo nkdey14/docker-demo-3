@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: demoapp
+spec:
+ replicas: 3
+ strategy: 
+  type: RollingUpdate
+ selector:
+  matchLabels:
+   app: springbootwebapp
+ template:
+  metadata:
+   name: springbootwebpod
+   labels:
+    app: springbootwebapp
+  spec:
+   containers:
+   - name: demoappcontainer
+     image: nitinkumar789/demoapp:v3
+     ports:
+     - containerPort: 9090
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: websvc
+spec:
+ type: LoadBalancer
+ selector:
+  app: springbootwebapp
+ ports:
+  - port: 80
+    targetPort: 9090
+...
