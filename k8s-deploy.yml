@@ -18,7 +18,7 @@ spec:
   spec:
    containers:
    - name: demoappcontainer
-     image: nitinkumar789/demoapp:v3
+     image: nitinkumar789/demoapp:dev-v3
      ports:
      - containerPort: 9090
 ---
